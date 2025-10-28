@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Keerthi Rapolu — Portfolio</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <main>
+      <section class="hero card">
+        <div class="row">
+          <img class="avatar" src="avatar.jpg" alt="Keerthi Rapolu" />
+          <div style="flex: 1">
+            <h1 class="title">Keerthi Rapolu</h1>
+            <p class="subtitle">Lead Data Engineer — Snowflake • Databricks • AWS • Azure</p>
+            <div class="meta">
+              <span>Houston, TX</span>
+              <a href="mailto:keerthiofrapolu@gmail.com">keerthiofrapolu@gmail.com</a>
+              <a href="tel:+12818020700">+1 (281) 802-0700</a>
+              <a href="https://www.linkedin.com/in/keerthi-r-4348833a" target="_blank" rel="noreferrer">LinkedIn</a>
+            </div>
+          </div>
+          <div>
+            <button type="button" onclick="downloadResume()" class="tab" style="background: #fff; border: 1px solid var(--ring); cursor: pointer">
+              Download Resume (PDF)
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="tabs">
+        <div role="tablist" aria-label="Sections" class="tablist">
+          <button role="tab" id="t-about" aria-selected="false" class="tab" tabindex="-1">About</button>
+          <button role="tab" id="t-exp" aria-selected="true" class="tab">Experience</button>
+          <button role="tab" id="t-skill" aria-selected="false" class="tab" tabindex="-1">Skills</button>
+          <button role="tab" id="t-cred" aria-selected="false" class="tab" tabindex="-1">Credentials</button>
+          <button role="tab" id="t-contact" aria-selected="false" class="tab" tabindex="-1">Contact</button>
+        </div>
+
+        <div role="tabpanel" id="p-about" class="tabpanel" hidden>
+          <div class="card" style="padding: 16px">
+            <h2>Summary</h2>
+            <ul class="list">
+              <li>Experienced Data Engineer with 13+ years across Snowflake, Databricks, AWS/Azure, and Oracle/Mainframe.</li>
+              <li>Builds production-ready pipelines, designs scalable warehousing, and leads migrations to modern cloud data stacks.</li>
+              <li>Hands-on with dbt, Delta Live Tables, Kafka, Airflow, NiFi, Qlik Replicate, Splink (entity resolution), and Python/SQL.</li>
+              <li>Collaborative, calm under pressure, and a proactive communicator; mentors teams and keeps stakeholders aligned.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div role="tabpanel" id="p-exp" class="tabpanel">
+          <div class="filter-wrap card" style="padding: 16px; margin-bottom: 12px">
+            <label for="filter" style="font-weight: 600; display: block; margin-bottom: 6px">Filter by tool, company, or keyword</label>
+            <input id="filter" class="input" placeholder="e.g. Snowflake, Databricks, AWS, Connect, dbt, Kafka…" />
+          </div>
+          <div id="jobs" class="grid" style="display: grid; gap: 12px"></div>
+        </div>
+
+        <div role="tabpanel" id="p-skill" class="tabpanel" hidden>
+          <div class="card" style="padding: 16px">
+            <h2>Skills</h2>
+            <div>
+              <h3>Core</h3>
+              <div class="chips">
+                <span class="chip">Snowflake</span><span class="chip">Databricks</span><span class="chip">Delta Lake</span>
+                <span class="chip">PySpark</span><span class="chip">SQL</span><span class="chip">Python</span><span class="chip">dbt</span>
+                <span class="chip">Qlik Replicate</span>
+              </div>
+              <h3 style="margin-top: 14px">Cloud &amp; Orchestration</h3>
+              <div class="chips">
+                <span class="chip">AWS (S3, Glue, Lambda, Redshift, CloudWatch, Connect, Bedrock, Lex)</span>
+                <span class="chip">Azure (ADF, DevOps)</span>
+                <span class="chip">Kafka</span>
+                <span class="chip">Airflow</span>
+                <span class="chip">NiFi</span>
+              </div>
+              <h3 style="margin-top: 14px">Data &amp; Quality</h3>
+              <div class="chips">
+                <span class="chip">Modeling</span><span class="chip">ETL/ELT</span><span class="chip">Streams &amp; Tasks</span>
+                <span class="chip">Change Data Feed</span><span class="chip">Testing (Tosca)</span>
+                <span class="chip">Entity Resolution (Splink)</span><span class="chip">Performance Tuning</span>
+              </div>
+              <h3 style="margin-top: 14px">Other</h3>
+              <div class="chips">
+                <span class="chip">Linux/Unix</span><span class="chip">PL/SQL</span><span class="chip">DB2</span>
+                <span class="chip">COBOL/JCL</span><span class="chip">Power BI</span><span class="chip">Tableau</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div role="tabpanel" id="p-cred" class="tabpanel" hidden>
+          <div class="card" style="padding: 16px">
+            <h2>Credentials</h2>
+            <div class="chips">
+              <span class="chip">SnowPro Core</span>
+              <span class="chip">AWS Certified Solutions Architect – Associate</span>
+            </div>
+            <div class="space"></div>
+            <h3>Education</h3>
+            <p>
+              <strong>B.Tech, Electronics &amp; Communication Engineering</strong><br />
+              Jawaharlal Nehru Technological University, Hyderabad
+            </p>
+          </div>
+        </div>
+
+        <div role="tabpanel" id="p-contact" class="tabpanel" hidden>
+          <div class="card" style="padding: 16px">
+            <h2>Get in touch</h2>
+            <p>
+              <a href="mailto:keerthiofrapolu@gmail.com">keerthiofrapolu@gmail.com</a><br />
+              <a href="tel:+12818020700">+1 (281) 802-0700</a><br />
+              <a href="https://www.linkedin.com/in/keerthi-r-4348833a" target="_blank" rel="noreferrer">LinkedIn Profile</a>
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="assets/js/main.js" defer></script>
+  </body>
+</html>
