@@ -1,125 +1,770 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Keerthi Rapolu — Portfolio</title>
-    <link rel="stylesheet" href="assets/css/style.css" />
-  </head>
-  <body>
-    <main>
-      <section class="hero card">
-        <div class="row">
-          <img class="avatar" src="avatar.jpg" alt="Keerthi Rapolu" />
-          <div style="flex: 1">
-            <h1 class="title">Keerthi Rapolu</h1>
-            <p class="subtitle">Lead Data Engineer — Snowflake • Databricks • AWS • Azure</p>
-            <div class="meta">
-              <span>Houston, TX</span>
-              <a href="mailto:keerthiofrapolu@gmail.com">keerthiofrapolu@gmail.com</a>
-              <a href="tel:+12818020700">+1 (281) 802-0700</a>
-              <a href="https://www.linkedin.com/in/keerthi-r-4348833a" target="_blank" rel="noreferrer">LinkedIn</a>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- SEO -->
+  <title>Keerthi Rapolu — Senior Data Engineer | Multi-Cloud · AI Data Platforms</title>
+  <meta name="description" content="Senior Data Engineer with 13+ years building scalable, AI-driven data platforms across AWS, Azure, Snowflake, and Databricks. FinOps, streaming pipelines, and cloud data architecture." />
+  <meta name="keywords" content="Data Engineer, Snowflake, Databricks, AWS, Azure, dbt, PySpark, FinOps, LangGraph, LLM, Data Architecture" />
+  <meta name="author" content="Keerthi Rapolu" />
+  <link rel="canonical" href="https://keerthi-rapolu.github.io/keerthi-portfolio/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Keerthi Rapolu — Senior Data Engineer" />
+  <meta property="og:description" content="Multi-cloud data engineering: Snowflake, Databricks, AWS, Azure, FinOps, and AI-driven data platforms. 13+ years of production experience." />
+  <meta property="og:url" content="https://keerthi-rapolu.github.io/keerthi-portfolio/" />
+  <meta property="og:image" content="https://keerthi-rapolu.github.io/keerthi-portfolio/avatar.jpg" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Keerthi Rapolu — Senior Data Engineer" />
+  <meta name="twitter:description" content="Multi-cloud data engineering, FinOps, and AI-driven data platforms." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <!-- ====================================================
+       Navigation
+       ==================================================== -->
+  <header class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">KR</a>
+      <nav aria-label="Main navigation">
+        <ul class="nav-links">
+          <li><a href="#about"      class="nav-link">About</a></li>
+          <li><a href="#skills"     class="nav-link">Skills</a></li>
+          <li><a href="#experience" class="nav-link">Experience</a></li>
+          <li><a href="#projects"   class="nav-link">Projects</a></li>
+          <li><a href="#research"   class="nav-link">Research</a></li>
+          <li><a href="#contact"    class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="resume-btn" onclick="downloadResume()">Download CV</button>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-menu" id="mobile-menu" hidden>
+      <a href="#about"      class="mobile-link">About</a>
+      <a href="#skills"     class="mobile-link">Skills</a>
+      <a href="#experience" class="mobile-link">Experience</a>
+      <a href="#projects"   class="mobile-link">Projects</a>
+      <a href="#research"   class="mobile-link">Research</a>
+      <a href="#contact"    class="mobile-link">Contact</a>
+      <button class="resume-btn resume-btn-mobile" onclick="downloadResume()">Download CV</button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ====================================================
+         Hero
+         ==================================================== -->
+    <section class="hero" id="hero">
+      <div class="hero-inner">
+
+        <div class="hero-text">
+          <div class="hero-badge">
+            <span class="badge-dot"></span>
+            Available for Senior Roles &nbsp;·&nbsp; Houston, TX
+          </div>
+          <h1 class="hero-name">Keerthi Rapolu</h1>
+          <p class="hero-title">
+            Senior Data Engineer
+            <span class="accent"> | </span>
+            Multi-Cloud &nbsp;·&nbsp; AI-Driven Data Platforms
+          </p>
+          <p class="hero-sub">
+            13+ years building production-grade data infrastructure — from mainframe modernization
+            to real-time cloud pipelines. Deep expertise in Snowflake, Databricks, AWS, and Azure.
+            Delivering AI-enabled analytics, FinOps intelligence, and scalable ELT systems
+            for Fortune 500 clients in healthcare, finance, and logistics.
+          </p>
+          <div class="hero-actions">
+            <button class="btn-primary" onclick="downloadResume()">Download Resume</button>
+            <a href="https://www.linkedin.com/in/keerthi-r-4348833a" target="_blank" rel="noreferrer" class="btn-secondary">LinkedIn</a>
+            <a href="https://github.com/Keerthi-Rapolu" target="_blank" rel="noreferrer" class="btn-secondary">GitHub</a>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <img class="avatar" src="avatar.jpg" alt="Keerthi Rapolu, Senior Data Engineer" />
+          <div class="stat-cards">
+            <div class="stat-card">
+              <span class="stat-number">13+</span>
+              <span class="stat-label">Years Exp.</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number">3</span>
+              <span class="stat-label">Cloud Platforms</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number">50M+</span>
+              <span class="stat-label">Records/Day</span>
             </div>
           </div>
-          <div>
-            <button type="button" onclick="downloadResume()" class="tab" style="background: #fff; border: 1px solid var(--ring); cursor: pointer">
-              Download Resume (PDF)
-            </button>
+        </div>
+
+      </div>
+
+      <div class="tech-strip">
+        <span>Snowflake</span><span class="sep">·</span>
+        <span>Databricks</span><span class="sep">·</span>
+        <span>AWS</span><span class="sep">·</span>
+        <span>Azure</span><span class="sep">·</span>
+        <span>dbt</span><span class="sep">·</span>
+        <span>PySpark</span><span class="sep">·</span>
+        <span>Kafka</span><span class="sep">·</span>
+        <span>LangGraph</span><span class="sep">·</span>
+        <span>Delta Lake</span><span class="sep">·</span>
+        <span>Great Expectations</span>
+      </div>
+    </section>
+
+    <!-- ====================================================
+         About
+         ==================================================== -->
+    <section class="section" id="about">
+      <div class="section-inner">
+
+        <div class="section-header fade-in">
+          <span class="section-label">About</span>
+          <h2 class="section-title">Turning data complexity into competitive advantage</h2>
+        </div>
+
+        <div class="about-grid fade-in">
+          <div class="about-text">
+            <p>
+              I'm a Senior Data Engineer with over 13 years of experience architecting and delivering
+              scalable data platforms across healthcare, financial services, logistics, and energy sectors.
+              My career spans the full stack — from COBOL mainframe systems through to cloud-native
+              lakehouses and AI-augmented data products.
+            </p>
+            <p>
+              I specialize in multi-cloud data engineering: designing production pipelines, migrating
+              legacy systems to modern medallion architectures, and building intelligent data platforms
+              that drive real business outcomes. I've led migrations of 300+ table Oracle systems into
+              Snowflake, built real-time Kafka pipelines processing millions of daily events, and
+              architected open-source FinOps intelligence frameworks that surface 30%+ cost savings
+              across AWS, Azure, and GCP.
+            </p>
+            <p>
+              My current focus is at the intersection of data engineering and AI — building agentic
+              data quality systems with LangGraph, LLM-powered schema assistants, and FinOps decision
+              engines with explainable reasoning. I believe the next generation of data infrastructure
+              is not just scalable — it's intelligent.
+            </p>
           </div>
-        </div>
-      </section>
 
-      <section class="tabs">
-        <div role="tablist" aria-label="Sections" class="tablist">
-          <button role="tab" id="t-about" aria-selected="false" class="tab" tabindex="-1">About</button>
-          <button role="tab" id="t-exp" aria-selected="true" class="tab">Experience</button>
-          <button role="tab" id="t-skill" aria-selected="false" class="tab" tabindex="-1">Skills</button>
-          <button role="tab" id="t-cred" aria-selected="false" class="tab" tabindex="-1">Credentials</button>
-          <button role="tab" id="t-contact" aria-selected="false" class="tab" tabindex="-1">Contact</button>
-        </div>
-
-        <div role="tabpanel" id="p-about" class="tabpanel" hidden>
-          <div class="card" style="padding: 16px">
-            <h2>Summary</h2>
-            <ul class="list">
-              <li>Experienced Data Engineer with 13+ years across Snowflake, Databricks, AWS/Azure, and Oracle/Mainframe.</li>
-              <li>Builds production-ready pipelines, designs scalable warehousing, and leads migrations to modern cloud data stacks.</li>
-              <li>Hands-on with dbt, Delta Live Tables, Kafka, Airflow, NiFi, Qlik Replicate, Splink (entity resolution), and Python/SQL.</li>
-              <li>Collaborative, calm under pressure, and a proactive communicator; mentors teams and keeps stakeholders aligned.</li>
-            </ul>
-          </div>
-        </div>
-
-        <div role="tabpanel" id="p-exp" class="tabpanel">
-          <div class="filter-wrap card" style="padding: 16px; margin-bottom: 12px">
-            <label for="filter" style="font-weight: 600; display: block; margin-bottom: 6px">Filter by tool, company, or keyword</label>
-            <input id="filter" class="input" placeholder="e.g. Snowflake, Databricks, AWS, Connect, dbt, Kafka…" />
-          </div>
-          <div id="jobs" class="grid" style="display: grid; gap: 12px"></div>
-        </div>
-
-        <div role="tabpanel" id="p-skill" class="tabpanel" hidden>
-          <div class="card" style="padding: 16px">
-            <h2>Skills</h2>
-            <div>
-              <h3>Core</h3>
-              <div class="chips">
-                <span class="chip">Snowflake</span><span class="chip">Databricks</span><span class="chip">Delta Lake</span>
-                <span class="chip">PySpark</span><span class="chip">SQL</span><span class="chip">Python</span><span class="chip">dbt</span>
-                <span class="chip">Qlik Replicate</span>
+          <div class="about-highlights">
+            <div class="highlight-card">
+              <div class="highlight-icon">&#9729;</div>
+              <div>
+                <strong>Multi-Cloud Architecture</strong>
+                <p>Production-grade workloads across AWS, Azure, and GCP with deep platform-native tooling and cost governance.</p>
               </div>
-              <h3 style="margin-top: 14px">Cloud &amp; Orchestration</h3>
-              <div class="chips">
-                <span class="chip">AWS (S3, Glue, Lambda, Redshift, CloudWatch, Connect, Bedrock, Lex)</span>
-                <span class="chip">Azure (ADF, DevOps)</span>
-                <span class="chip">Kafka</span>
-                <span class="chip">Airflow</span>
-                <span class="chip">NiFi</span>
+            </div>
+            <div class="highlight-card">
+              <div class="highlight-icon">&#9889;</div>
+              <div>
+                <strong>Real-Time Pipelines</strong>
+                <p>Kafka, Delta Live Tables, and event-driven architectures processing 50M+ records per day with ACID guarantees.</p>
               </div>
-              <h3 style="margin-top: 14px">Data &amp; Quality</h3>
-              <div class="chips">
-                <span class="chip">Modeling</span><span class="chip">ETL/ELT</span><span class="chip">Streams &amp; Tasks</span>
-                <span class="chip">Change Data Feed</span><span class="chip">Testing (Tosca)</span>
-                <span class="chip">Entity Resolution (Splink)</span><span class="chip">Performance Tuning</span>
+            </div>
+            <div class="highlight-card">
+              <div class="highlight-icon">&#129302;</div>
+              <div>
+                <strong>AI-Augmented Data</strong>
+                <p>LangGraph agents, vector databases, and LLM integrations powering the next layer of intelligent data systems.</p>
               </div>
-              <h3 style="margin-top: 14px">Other</h3>
-              <div class="chips">
-                <span class="chip">Linux/Unix</span><span class="chip">PL/SQL</span><span class="chip">DB2</span>
-                <span class="chip">COBOL/JCL</span><span class="chip">Power BI</span><span class="chip">Tableau</span>
+            </div>
+            <div class="highlight-card">
+              <div class="highlight-icon">&#128200;</div>
+              <div>
+                <strong>Measurable Impact</strong>
+                <p>30%+ cloud cost reductions, 60% latency improvements, and zero-downtime migrations across enterprise engagements.</p>
               </div>
             </div>
           </div>
         </div>
 
-        <div role="tabpanel" id="p-cred" class="tabpanel" hidden>
-          <div class="card" style="padding: 16px">
-            <h2>Credentials</h2>
+      </div>
+    </section>
+
+    <!-- ====================================================
+         Skills
+         ==================================================== -->
+    <section class="section section-alt" id="skills">
+      <div class="section-inner">
+
+        <div class="section-header fade-in">
+          <span class="section-label">Expertise</span>
+          <h2 class="section-title">Technical Skills</h2>
+        </div>
+
+        <div class="skills-grid fade-in">
+
+          <div class="skill-group">
+            <h3 class="skill-group-title">Data Engineering Core</h3>
             <div class="chips">
-              <span class="chip">SnowPro Core</span>
-              <span class="chip">AWS Certified Solutions Architect – Associate</span>
+              <span class="chip">PySpark</span>
+              <span class="chip">SQL</span>
+              <span class="chip">Databricks</span>
+              <span class="chip">dbt</span>
+              <span class="chip">Snowflake</span>
+              <span class="chip">Delta Lake</span>
+              <span class="chip">Delta Live Tables</span>
+              <span class="chip">Python</span>
+              <span class="chip">Snowpark</span>
             </div>
-            <div class="space"></div>
-            <h3>Education</h3>
-            <p>
-              <strong>B.Tech, Electronics &amp; Communication Engineering</strong><br />
-              Jawaharlal Nehru Technological University, Hyderabad
-            </p>
+          </div>
+
+          <div class="skill-group">
+            <h3 class="skill-group-title">Cloud Platforms</h3>
+            <div class="chips">
+              <span class="chip">AWS Glue</span>
+              <span class="chip">AWS S3</span>
+              <span class="chip">AWS Lambda</span>
+              <span class="chip">AWS RDS</span>
+              <span class="chip">Amazon Bedrock</span>
+              <span class="chip">AWS Connect</span>
+              <span class="chip">Azure ADF</span>
+              <span class="chip">Azure DevOps</span>
+              <span class="chip">GCP</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <h3 class="skill-group-title">Streaming &amp; Orchestration</h3>
+            <div class="chips">
+              <span class="chip">Apache Kafka</span>
+              <span class="chip">Apache Airflow</span>
+              <span class="chip">Apache NiFi</span>
+              <span class="chip">Qlik Replicate</span>
+              <span class="chip">Fivetran</span>
+              <span class="chip">Snowpipe</span>
+              <span class="chip">SSIS</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <h3 class="skill-group-title">AI &amp; Emerging Tech</h3>
+            <div class="chips">
+              <span class="chip chip-accent">LangGraph</span>
+              <span class="chip chip-accent">LLM Integrations</span>
+              <span class="chip chip-accent">Vector Databases</span>
+              <span class="chip chip-accent">RAG Pipelines</span>
+              <span class="chip chip-accent">Great Expectations</span>
+              <span class="chip chip-accent">DuckDB</span>
+              <span class="chip chip-accent">Splink / Entity Resolution</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <h3 class="skill-group-title">Data Modeling &amp; Quality</h3>
+            <div class="chips">
+              <span class="chip">Star Schema</span>
+              <span class="chip">Dimensional Modeling</span>
+              <span class="chip">Medallion Architecture</span>
+              <span class="chip">Incremental ELT</span>
+              <span class="chip">Change Data Capture</span>
+              <span class="chip">Data Quality Frameworks</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <h3 class="skill-group-title">Legacy &amp; Foundations</h3>
+            <div class="chips">
+              <span class="chip chip-muted">COBOL / JCL</span>
+              <span class="chip chip-muted">PL/SQL</span>
+              <span class="chip chip-muted">Oracle</span>
+              <span class="chip chip-muted">DB2</span>
+              <span class="chip chip-muted">VSAM / CICS</span>
+              <span class="chip chip-muted">Linux / Unix</span>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="certs-row fade-in">
+          <div class="cert-badge">
+            <span class="cert-icon">&#10003;</span>
+            <span>SnowPro Core Certified</span>
+          </div>
+          <div class="cert-badge">
+            <span class="cert-icon">&#10003;</span>
+            <span>AWS Certified Solutions Architect &ndash; Associate</span>
+          </div>
+          <div class="cert-badge cert-edu">
+            <span class="cert-icon">&#127979;</span>
+            <span>B.Tech, Electronics &amp; Communication Engineering &mdash; JNTU Hyderabad</span>
           </div>
         </div>
 
-        <div role="tabpanel" id="p-contact" class="tabpanel" hidden>
-          <div class="card" style="padding: 16px">
-            <h2>Get in touch</h2>
-            <p>
-              <a href="mailto:keerthiofrapolu@gmail.com">keerthiofrapolu@gmail.com</a><br />
-              <a href="tel:+12818020700">+1 (281) 802-0700</a><br />
-              <a href="https://www.linkedin.com/in/keerthi-r-4348833a" target="_blank" rel="noreferrer">LinkedIn Profile</a>
+      </div>
+    </section>
+
+    <!-- ====================================================
+         Experience
+         ==================================================== -->
+    <section class="section" id="experience">
+      <div class="section-inner">
+
+        <div class="section-header fade-in">
+          <span class="section-label">Career</span>
+          <h2 class="section-title">Professional Experience</h2>
+        </div>
+
+        <div class="timeline">
+
+          <article class="timeline-item fade-in">
+            <div class="timeline-marker"></div>
+            <div class="timeline-card">
+              <div class="job-header">
+                <div>
+                  <h3 class="job-role">Lead Data Engineer</h3>
+                  <p class="job-company">
+                    Genpact
+                    <span class="client-tag">Client: Kaiser Permanente</span>
+                  </p>
+                </div>
+                <div class="job-meta">
+                  <span class="job-period">May 2024 – Present</span>
+                  <span class="job-location">Houston, TX</span>
+                </div>
+              </div>
+              <div class="job-stack chips">
+                <span class="chip chip-sm">AWS Connect</span>
+                <span class="chip chip-sm">AWS Glue</span>
+                <span class="chip chip-sm">Amazon Bedrock</span>
+                <span class="chip chip-sm">AWS Lambda</span>
+                <span class="chip chip-sm">RDS MySQL</span>
+                <span class="chip chip-sm">Amazon Lex</span>
+                <span class="chip chip-sm">Python</span>
+                <span class="chip chip-sm">CloudWatch</span>
+              </div>
+              <ul class="job-bullets">
+                <li>Architected AWS Connect POC with intelligent call routing, real-time sentiment analysis, and HIPAA-compliant patient data integration — adopted for enterprise-wide pilot affecting 10K+ daily patient interactions.</li>
+                <li>Engineered Glue ETL pipelines ingesting multi-format S3 data into RDS MySQL with star schema modeling, enabling sub-minute analytics refresh for operational dashboards.</li>
+                <li>Designed Patient 360 Agent Workspace using de-identified data exposed via VPC Lambda APIs, reducing average agent handle time and improving CX resolution accuracy.</li>
+                <li>Prototyped AI-driven CX scoring with Amazon Bedrock + Lex — generated synthetic training datasets and benchmarked sentiment, call quality, and patient NPS prediction models.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="timeline-item fade-in">
+            <div class="timeline-marker"></div>
+            <div class="timeline-card">
+              <div class="job-header">
+                <div>
+                  <h3 class="job-role">Lead Data Engineer</h3>
+                  <p class="job-company">Landry's / Tachus</p>
+                </div>
+                <div class="job-meta">
+                  <span class="job-period">Aug 2023 – May 2024</span>
+                  <span class="job-location">Houston, TX</span>
+                </div>
+              </div>
+              <div class="job-stack chips">
+                <span class="chip chip-sm">Databricks</span>
+                <span class="chip chip-sm">Delta Live Tables</span>
+                <span class="chip chip-sm">Snowflake</span>
+                <span class="chip chip-sm">Azure ADF</span>
+                <span class="chip chip-sm">Fivetran</span>
+                <span class="chip chip-sm">Splink</span>
+                <span class="chip chip-sm">PySpark</span>
+                <span class="chip chip-sm">Azure DevOps</span>
+              </div>
+              <ul class="job-bullets">
+                <li>Built production Delta Live Tables pipelines with custom PySpark transforms, reducing data latency by 60% and enabling real-time enterprise data products for hospitality and telecom business units.</li>
+                <li>Implemented Splink ML entity resolution to deduplicate 5M+ customer profiles — reduced false-positive match rate by 40% and significantly improved downstream CRM and loyalty data accuracy.</li>
+                <li>Automated CI/CD deployments via Azure DevOps; onboarded 8+ source systems through Fivetran with zero-downtime integration and SLA-backed data freshness guarantees.</li>
+                <li>Designed scalable Snowflake + ADF ELT architecture for continuous near-real-time loads, supporting data products across analytics, operations, and executive reporting.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="timeline-item fade-in">
+            <div class="timeline-marker"></div>
+            <div class="timeline-card">
+              <div class="job-header">
+                <div>
+                  <h3 class="job-role">Module Lead Engineer</h3>
+                  <p class="job-company">
+                    Impetus Technologies
+                    <span class="client-tag">Client: Ally Financial</span>
+                  </p>
+                </div>
+                <div class="job-meta">
+                  <span class="job-period">Dec 2022 – Aug 2023</span>
+                </div>
+              </div>
+              <div class="job-stack chips">
+                <span class="chip chip-sm">Snowflake</span>
+                <span class="chip chip-sm">Qlik Replicate</span>
+                <span class="chip chip-sm">dbt</span>
+                <span class="chip chip-sm">Snowpark</span>
+                <span class="chip chip-sm">Tosca</span>
+                <span class="chip chip-sm">PL/SQL</span>
+                <span class="chip chip-sm">Python</span>
+              </div>
+              <ul class="job-bullets">
+                <li>Led Oracle → Snowflake migration strategy and execution for 300+ tables using Qlik Replicate, achieving a zero-data-loss cutover with minimal downtime across mission-critical financial datasets.</li>
+                <li>Built incremental dbt models with full lineage documentation and versioning — adopted as the engineering standard across 5 cross-functional squads.</li>
+                <li>Ported mission-critical PL/SQL stored procedures to Snowpark Python; instituted Tosca-based automated data quality and compliance testing to ensure regulatory integrity.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="timeline-item fade-in">
+            <div class="timeline-marker"></div>
+            <div class="timeline-card">
+              <div class="job-header">
+                <div>
+                  <h3 class="job-role">Module Lead Engineer</h3>
+                  <p class="job-company">
+                    Impetus Technologies
+                    <span class="client-tag">Client: Norfolk Southern</span>
+                  </p>
+                </div>
+                <div class="job-meta">
+                  <span class="job-period">Jan 2022 – Dec 2022</span>
+                </div>
+              </div>
+              <div class="job-stack chips">
+                <span class="chip chip-sm">Databricks</span>
+                <span class="chip chip-sm">Delta Lake</span>
+                <span class="chip chip-sm">PySpark</span>
+                <span class="chip chip-sm">Apache Kafka</span>
+                <span class="chip chip-sm">DB2</span>
+                <span class="chip chip-sm">AWS</span>
+              </div>
+              <ul class="job-bullets">
+                <li>Modernized COBOL/JCL/DB2 mainframe feeds into a bronze/silver/gold Databricks lakehouse, enabling real-time analytics on mission-critical freight operations data.</li>
+                <li>Refactored 50K+ lines of legacy mainframe logic into optimized PySpark; introduced Delta Live Tables for ACID compliance, data lineage, and automated quality enforcement.</li>
+                <li>Integrated Apache Kafka streaming ingestion to enable sub-second event processing for freight tracking pipelines, eliminating multi-hour batch delays.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="timeline-item fade-in">
+            <div class="timeline-marker"></div>
+            <div class="timeline-card">
+              <div class="job-header">
+                <div>
+                  <h3 class="job-role">Senior Software Engineer</h3>
+                  <p class="job-company">
+                    Capricorn Systems
+                    <span class="client-tag">Client: Meridian Cooperative</span>
+                  </p>
+                </div>
+                <div class="job-meta">
+                  <span class="job-period">Feb 2019 – Jan 2022</span>
+                </div>
+              </div>
+              <div class="job-stack chips">
+                <span class="chip chip-sm">Snowflake</span>
+                <span class="chip chip-sm">AWS Glue</span>
+                <span class="chip chip-sm">AWS Lambda</span>
+                <span class="chip chip-sm">Apache NiFi</span>
+                <span class="chip chip-sm">Apache Airflow</span>
+                <span class="chip chip-sm">Oracle</span>
+              </div>
+              <ul class="job-bullets">
+                <li>Reduced data ingestion latency from days to hours by architecting Snowpipe + event-driven Lambda triggers for continuous, real-time S3 data landing into Snowflake.</li>
+                <li>Orchestrated on-prem Oracle extracts with Apache NiFi into S3; managed Apache Airflow scheduling for 20+ interdependent pipelines with end-to-end SLA monitoring.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="timeline-item fade-in">
+            <div class="timeline-marker timeline-marker-dim"></div>
+            <div class="timeline-card">
+              <div class="job-header">
+                <div>
+                  <h3 class="job-role">Software Engineer</h3>
+                  <p class="job-company">Capricorn Systems (SEDC) &nbsp;&amp;&nbsp; Blueliner (MSC)</p>
+                </div>
+                <div class="job-meta">
+                  <span class="job-period">Jan 2012 – Jan 2019</span>
+                </div>
+              </div>
+              <div class="job-stack chips">
+                <span class="chip chip-sm chip-muted">COBOL / JCL</span>
+                <span class="chip chip-sm chip-muted">DB2</span>
+                <span class="chip chip-sm chip-muted">Oracle</span>
+                <span class="chip chip-sm chip-muted">.NET</span>
+                <span class="chip chip-sm chip-muted">Linux</span>
+                <span class="chip chip-sm chip-muted">VSAM / CICS</span>
+              </div>
+              <ul class="job-bullets">
+                <li>Built and maintained core shipping modules and enterprise applications across COBOL/DB2/Oracle stacks — the mainframe-to-cloud fluency that drives modernization leadership today.</li>
+                <li>Delivered features across mixed on-prem stacks; automated operational workflows with Unix shell scripting and enforced unit-test discipline for consistent, on-time delivery.</li>
+              </ul>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================
+         Projects
+         ==================================================== -->
+    <section class="section section-alt" id="projects">
+      <div class="section-inner">
+
+        <div class="section-header fade-in">
+          <span class="section-label">Open Source</span>
+          <h2 class="section-title">Featured Projects</h2>
+        </div>
+
+        <div class="projects-grid">
+
+          <article class="project-card fade-in">
+            <div class="project-top">
+              <div class="project-icon">&#128202;</div>
+              <a href="https://github.com/Keerthi-Rapolu/multicloud-finops-framework"
+                 target="_blank" rel="noreferrer" class="project-link">GitHub &#8599;</a>
+            </div>
+            <h3 class="project-title">Multicloud FinOps Intelligence Platform</h3>
+            <p class="project-desc">
+              <strong>Problem:</strong> No unified cost visibility across AWS, Azure, and GCP —
+              engineering teams lacked actionable insight into cloud spend drivers and optimization opportunities.
             </p>
+            <p class="project-desc">
+              <strong>Solution:</strong> Open-source FinOps framework with normalized multi-cloud cost
+              ingestion, NEC (Normalized Estimated Cost) modeling, AI-driven anomaly detection, and
+              a LangGraph-powered recommendation engine with explainable reasoning.
+            </p>
+            <div class="project-stack chips">
+              <span class="chip chip-sm">Python</span>
+              <span class="chip chip-sm">DuckDB</span>
+              <span class="chip chip-sm">dbt</span>
+              <span class="chip chip-sm">Streamlit</span>
+              <span class="chip chip-sm">LangGraph</span>
+              <span class="chip chip-sm">AWS Cost Explorer</span>
+              <span class="chip chip-sm">Azure Cost Mgmt</span>
+            </div>
+            <div class="project-impact">
+              <span class="impact-tag">30% cost reduction identified</span>
+              <span class="impact-tag">Open-sourced on GitHub</span>
+            </div>
+          </article>
+
+          <article class="project-card fade-in">
+            <div class="project-top">
+              <div class="project-icon">&#129302;</div>
+              <a href="https://github.com/Keerthi-Rapolu"
+                 target="_blank" rel="noreferrer" class="project-link">GitHub &#8599;</a>
+            </div>
+            <h3 class="project-title">LangGraph Data Quality Copilot</h3>
+            <p class="project-desc">
+              <strong>Problem:</strong> Data quality failures surfaced too late in pipelines,
+              requiring lengthy manual root cause investigation by senior engineers.
+            </p>
+            <p class="project-desc">
+              <strong>Solution:</strong> Agentic LLM system using LangGraph + local LLM (Ollama)
+              for autonomous DuckDB profiling, Great Expectations validation, and natural-language
+              root cause explanation with targeted remediation recommendations.
+            </p>
+            <div class="project-stack chips">
+              <span class="chip chip-sm">LangGraph</span>
+              <span class="chip chip-sm">Ollama</span>
+              <span class="chip chip-sm">DuckDB</span>
+              <span class="chip chip-sm">Great Expectations</span>
+              <span class="chip chip-sm">Python</span>
+            </div>
+            <div class="project-impact">
+              <span class="impact-tag">70% triage time reduction</span>
+              <span class="impact-tag">Human-readable validation reports</span>
+            </div>
+          </article>
+
+          <article class="project-card fade-in">
+            <div class="project-top">
+              <div class="project-icon">&#128269;</div>
+              <a href="https://github.com/Keerthi-Rapolu"
+                 target="_blank" rel="noreferrer" class="project-link">GitHub &#8599;</a>
+            </div>
+            <h3 class="project-title">Vector DB SQL Assistant</h3>
+            <p class="project-desc">
+              <strong>Problem:</strong> Analysts spending hours authoring SQL against complex,
+              undocumented schemas — slow iteration, frequent errors, high dependency on data engineers.
+            </p>
+            <p class="project-desc">
+              <strong>Solution:</strong> Metadata-driven SQL generation using vector embeddings
+              of schema definitions and curated sample queries, enabling natural language to
+              production-ready SQL translation with full schema awareness.
+            </p>
+            <div class="project-stack chips">
+              <span class="chip chip-sm">ChromaDB</span>
+              <span class="chip chip-sm">OpenAI Embeddings</span>
+              <span class="chip chip-sm">Python</span>
+              <span class="chip chip-sm">Snowflake</span>
+              <span class="chip chip-sm">DuckDB</span>
+            </div>
+            <div class="project-impact">
+              <span class="impact-tag">50% SQL authoring time saved</span>
+              <span class="impact-tag">Schema-aware generation</span>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================
+         Research / Publications
+         ==================================================== -->
+    <section class="section" id="research">
+      <div class="section-inner">
+
+        <div class="section-header fade-in">
+          <span class="section-label">Thought Leadership</span>
+          <h2 class="section-title">Publications &amp; Research Work</h2>
+        </div>
+
+        <div class="research-list fade-in">
+
+          <article class="research-card">
+            <div class="research-type">Framework &nbsp;·&nbsp; Open Source</div>
+            <h3 class="research-title">FinOps Analytics Framework for Multi-Cloud Environments</h3>
+            <p class="research-desc">
+              End-to-end methodology and open-source implementation presenting NEC cost modeling,
+              AI-driven anomaly detection, and optimization recommendation patterns across AWS, Azure,
+              and GCP. Covers data normalization standards, unit economics modeling, team-level cost
+              attribution, and LLM-augmented FinOps decision workflows — with a fully interactive
+              Streamlit dashboard and dbt-powered data model.
+            </p>
+            <div class="research-tags chips">
+              <span class="chip chip-sm">FinOps</span>
+              <span class="chip chip-sm">Multi-Cloud</span>
+              <span class="chip chip-sm">Cost Modeling</span>
+              <span class="chip chip-sm">AI Analytics</span>
+              <span class="chip chip-sm">dbt</span>
+              <span class="chip chip-sm">LangGraph</span>
+            </div>
+            <a href="https://github.com/Keerthi-Rapolu/multicloud-finops-framework"
+               target="_blank" rel="noreferrer" class="research-link">View on GitHub &#8599;</a>
+          </article>
+
+          <article class="research-card">
+            <div class="research-type">Design Document &nbsp;·&nbsp; Engineering</div>
+            <h3 class="research-title">AI-Augmented Data Engineering: LLM Integration Patterns</h3>
+            <p class="research-desc">
+              Design documentation covering agentic data quality copilots, vector-DB-powered schema
+              assistants, and LangGraph orchestration patterns for production data pipelines.
+              Addresses prompt engineering for structured data tasks, local LLM trade-offs (Ollama
+              vs. hosted APIs), embedding strategies for technical metadata, and evaluation frameworks
+              for AI-generated SQL and data quality assessments.
+            </p>
+            <div class="research-tags chips">
+              <span class="chip chip-sm">LangGraph</span>
+              <span class="chip chip-sm">LLM Agents</span>
+              <span class="chip chip-sm">Vector DB</span>
+              <span class="chip chip-sm">Data Quality</span>
+              <span class="chip chip-sm">Prompt Engineering</span>
+            </div>
+            <a href="https://github.com/Keerthi-Rapolu"
+               target="_blank" rel="noreferrer" class="research-link">View on GitHub &#8599;</a>
+          </article>
+
+          <article class="research-card">
+            <div class="research-type">Internal Knowledge Base &nbsp;·&nbsp; Architecture</div>
+            <h3 class="research-title">Enterprise Data Migration Playbooks</h3>
+            <p class="research-desc">
+              Contributor to engineering knowledge base on Snowflake migration patterns
+              (Oracle/Teradata → Snowflake), dbt modeling best practices for financial data,
+              and real-time streaming architecture using Kafka and Delta Live Tables.
+              Informed by hands-on delivery across Ally Financial, Kaiser Permanente, and
+              Norfolk Southern — covering schema translation, change data capture strategies,
+              and zero-downtime cutover methodologies.
+            </p>
+            <div class="research-tags chips">
+              <span class="chip chip-sm">Snowflake Migration</span>
+              <span class="chip chip-sm">dbt Best Practices</span>
+              <span class="chip chip-sm">Streaming Architecture</span>
+              <span class="chip chip-sm">CDC</span>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================
+         Contact
+         ==================================================== -->
+    <section class="section section-dark" id="contact">
+      <div class="section-inner">
+
+        <div class="section-header fade-in">
+          <span class="section-label section-label-light">Let's Connect</span>
+          <h2 class="section-title section-title-light">Open to Senior Data Engineering Roles</h2>
+          <p class="contact-sub">
+            Available for full-time, contract, and advisory engagements. Focused on multi-cloud
+            data platforms, AI-augmented data systems, and FinOps architecture.
+          </p>
+        </div>
+
+        <div class="contact-grid fade-in">
+          <a href="mailto:keerthiofrapolu@gmail.com" class="contact-card">
+            <div class="contact-icon">&#9993;</div>
+            <div>
+              <div class="contact-label">Email</div>
+              <div class="contact-value">keerthiofrapolu@gmail.com</div>
+            </div>
+          </a>
+          <a href="https://www.linkedin.com/in/keerthi-r-4348833a"
+             target="_blank" rel="noreferrer" class="contact-card">
+            <div class="contact-icon">&#128101;</div>
+            <div>
+              <div class="contact-label">LinkedIn</div>
+              <div class="contact-value">keerthi-r-4348833a</div>
+            </div>
+          </a>
+          <a href="https://github.com/Keerthi-Rapolu"
+             target="_blank" rel="noreferrer" class="contact-card">
+            <div class="contact-icon">&#128736;</div>
+            <div>
+              <div class="contact-label">GitHub</div>
+              <div class="contact-value">Keerthi-Rapolu</div>
+            </div>
+          </a>
+          <div class="contact-card contact-card-passive">
+            <div class="contact-icon">&#128205;</div>
+            <div>
+              <div class="contact-label">Location</div>
+              <div class="contact-value">Houston, TX</div>
+            </div>
           </div>
         </div>
-      </section>
-    </main>
 
-    <script src="assets/js/main.js" defer></script>
-  </body>
+        <div class="contact-cta fade-in">
+          <button class="btn-primary btn-large" onclick="downloadResume()">
+            Download Full Resume (PDF)
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 Keerthi Rapolu &nbsp;·&nbsp; Senior Data Engineer &nbsp;·&nbsp; Houston, TX</p>
+  </footer>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
 </html>
