@@ -540,6 +540,28 @@ img { max-width: 100%; display: block; }
   color: var(--ink-muted);
 }
 
+.cert-badge-featured {
+  border-color: var(--teal);
+  background: rgba(44, 166, 164, 0.06);
+}
+
+.cert-badge-featured .cert-icon { font-size: 18px; }
+
+.cert-name {
+  display: block;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--navy);
+}
+
+.cert-provider {
+  display: block;
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--teal);
+  margin-top: 2px;
+}
+
 .cert-icon {
   color: var(--teal);
   font-weight: 900;
