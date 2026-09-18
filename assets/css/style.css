@@ -164,6 +164,9 @@ h1, h2, h3, h4 { font-weight: 400; line-height: 1.1; letter-spacing: -0.015em; }
   letter-spacing: -0.022em;
   line-height: 1.06;
   max-width: 18ch;
+  /* Without this a short last word strands on its own line — "What companies
+     actually / get". Balance evens the lines instead. */
+  text-wrap: balance;
 }
 .sec-title em { font-style: italic; color: var(--accent); }
 .band-dark .sec-title em { color: #E8879B; }
@@ -344,7 +347,7 @@ h1, h2, h3, h4 { font-weight: 400; line-height: 1.1; letter-spacing: -0.015em; }
 .hero {
   position: relative;
   overflow: hidden;
-  padding: calc(var(--nav-h) + 96px) 0 0;
+  padding: calc(var(--nav-h) + 52px) 0 0;
 }
 .hero::after {
   content: '';
@@ -358,16 +361,16 @@ h1, h2, h3, h4 { font-weight: 400; line-height: 1.1; letter-spacing: -0.015em; }
 }
 .hero-inner { position: relative; z-index: 1; }
 
-.hero-kicker { display: flex; align-items: center; gap: 14px; margin-bottom: 38px; }
+.hero-kicker { display: flex; align-items: center; gap: 14px; margin-bottom: 26px; }
 .hero-kicker .rule { flex: 0 0 44px; height: 1px; background: var(--accent); }
 
 .hero-statement {
   font-family: var(--serif);
-  font-size: clamp(40px, 7.4vw, 96px);
+  font-size: clamp(38px, 6.8vw, 86px);
   line-height: 1.02;
   letter-spacing: -0.03em;
   max-width: 17ch;
-  margin-bottom: 40px;
+  margin-bottom: 28px;
   text-wrap: balance;
 }
 .hero-statement em { font-style: italic; color: var(--accent); }
@@ -377,7 +380,7 @@ h1, h2, h3, h4 { font-weight: 400; line-height: 1.1; letter-spacing: -0.015em; }
   grid-template-columns: var(--rail) minmax(0, 1fr);
   gap: var(--rail-gap);
   align-items: start;
-  padding-top: 26px;
+  padding-top: 22px;
   border-top: 1px solid var(--rule-2);
 }
 .hero-who { display: flex; flex-direction: column; gap: 3px; }
@@ -389,7 +392,7 @@ h1, h2, h3, h4 { font-weight: 400; line-height: 1.1; letter-spacing: -0.015em; }
   color: var(--faint);
 }
 
-.hero-detail { display: flex; flex-direction: column; gap: 22px; }
+.hero-detail { display: flex; flex-direction: column; gap: 18px; }
 .hero-sub { max-width: 56ch; font-size: 17px; line-height: 1.62; color: var(--muted); }
 .hero-sub strong { color: var(--ink); font-weight: 500; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
