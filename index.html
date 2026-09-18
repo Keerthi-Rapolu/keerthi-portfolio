@@ -30,7 +30,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&family=Inter:wght@400;450;500;600&display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="assets/css/style.css?v=4" />
+  <link rel="stylesheet" href="assets/css/style.css?v=5" />
 
   <script type="application/ld+json">
   {
@@ -106,6 +106,33 @@
     <section class="hero" id="top">
       <div class="shell hero-inner">
 
+        <div class="hero-top">
+        <svg class="hero-bars" viewBox="0 0 460 360" preserveAspectRatio="xMaxYMax meet"
+             aria-hidden="true" focusable="false">
+          <defs>
+            <linearGradient id="barFade" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="460" y2="0">
+              <stop offset="0"    stop-color="#B4415C" stop-opacity="0.03" />
+              <stop offset="0.55" stop-color="#B4415C" stop-opacity="0.22" />
+              <stop offset="1"    stop-color="#B4415C" stop-opacity="0.62" />
+            </linearGradient>
+          </defs>
+          <g fill="url(#barFade)">
+          <rect class="bar" style="--i:0" x="0" y="332" width="14" height="28" />
+          <rect class="bar" style="--i:1" x="40" y="325" width="14" height="35" />
+          <rect class="bar" style="--i:2" x="80" y="310" width="14" height="50" />
+          <rect class="bar" style="--i:3" x="120" y="290" width="14" height="70" />
+          <rect class="bar" style="--i:4" x="160" y="266" width="14" height="94" />
+          <rect class="bar" style="--i:5" x="200" y="238" width="14" height="122" />
+          <rect class="bar" style="--i:6" x="240" y="206" width="14" height="154" />
+          <rect class="bar" style="--i:7" x="280" y="171" width="14" height="189" />
+          <rect class="bar" style="--i:8" x="320" y="133" width="14" height="227" />
+          <rect class="bar" style="--i:9" x="360" y="91" width="14" height="269" />
+          <rect class="bar" style="--i:10" x="400" y="47" width="14" height="313" />
+          <rect class="bar" style="--i:11" x="440" y="0" width="14" height="360" />
+          </g>
+          <line x1="0" y1="359.5" x2="460" y2="359.5" stroke="url(#barFade)" stroke-width="1" />
+        </svg>
+
         <p class="hero-kicker">
           <span class="rule" aria-hidden="true"></span>
           <span class="mono-label">Cloud FinOps &middot; Data platforms &middot; AI pipelines</span>
@@ -114,6 +141,7 @@
         <h1 class="hero-statement">
           I build the data systems that tell companies what their cloud <em>actually costs</em>.
         </h1>
+        </div>
 
         <div class="hero-meta">
           <div class="hero-who">
@@ -139,10 +167,6 @@
             </p>
           </div>
 
-          <figure class="hero-portrait">
-            <img src="avatar.jpg?v=2" width="480" height="600" alt="Keerthi Rapolu"
-                 fetchpriority="high" decoding="async" />
-          </figure>
         </div>
 
         <dl class="proof">
