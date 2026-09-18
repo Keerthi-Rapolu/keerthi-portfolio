@@ -59,6 +59,17 @@ Type is a three-way pairing: **Instrument Serif** for display, **Inter** for bod
   and the sheet closes itself on resize to desktop.
 - **Print** — `@media print` strips navigation and chrome so the page prints as a clean document.
 
+## Cache busting
+
+Assets carry a `?v=N` query (`style.css?v=3`, `avatar.jpg?v=2`, …). GitHub Pages
+serves `Cache-Control: max-age=600`, so without a version a returning visitor can
+get an old cached file applied to new markup — which once left the whole page
+unstyled, and another time showed a replaced photo.
+
+**Bump the version of any asset you change**, and only that asset. The static
+check in the test suite fails if a mutable asset (css/js/jpg/png/webp/pdf) has no
+`?v=`.
+
 ## Editing content
 
 Everything is in `index.html`; there is no CMS or data file.

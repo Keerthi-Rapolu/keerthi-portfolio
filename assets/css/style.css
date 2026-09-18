@@ -163,9 +163,11 @@ h1, h2, h3, h4 { font-weight: 400; line-height: 1.1; letter-spacing: -0.015em; }
   font-size: clamp(30px, 4vw, 50px);
   letter-spacing: -0.022em;
   line-height: 1.06;
-  max-width: 18ch;
-  /* Without this a short last word strands on its own line — "What companies
-     actually / get". Balance evens the lines instead. */
+  /* The widest heading needs 616px and the column gives 938px+, so every one
+     sits on a single line on desktop. The cap only guards against a future
+     heading running the full column width, which is too wide for display type.
+     Below ~900px the column narrows and they wrap; balance evens those. */
+  max-width: 34ch;
   text-wrap: balance;
 }
 .sec-title em { font-style: italic; color: var(--accent); }
