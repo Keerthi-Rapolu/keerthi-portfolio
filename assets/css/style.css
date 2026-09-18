@@ -379,7 +379,7 @@ h1, h2, h3, h4 { font-weight: 400; line-height: 1.1; letter-spacing: -0.015em; }
 
 .hero-meta {
   display: grid;
-  grid-template-columns: var(--rail) minmax(0, 1fr);
+  grid-template-columns: var(--rail) minmax(0, 1fr) minmax(0, 236px);
   gap: var(--rail-gap);
   align-items: start;
   padding-top: 22px;
@@ -395,6 +395,34 @@ h1, h2, h3, h4 { font-weight: 400; line-height: 1.1; letter-spacing: -0.015em; }
 }
 
 .hero-detail { display: flex; flex-direction: column; gap: 18px; }
+
+/* Verified credential, sitting with the name rather than buried in section 04 */
+.hero-cert {
+  /* inline-block so margin applies; the nbsp in the markup still keeps the
+     arrow with the last word. Padding lifts the tap target to 24px+. */
+  display: inline-block;
+  padding: 4px 0;
+  margin-top: 6px;
+  font: 500 11px/1.5 var(--mono);
+  letter-spacing: 0.05em;
+  color: var(--accent);
+  border-bottom: 1px solid transparent;
+  transition: border-color var(--ease);
+}
+.hero-cert:hover { border-bottom-color: var(--accent); }
+
+/* Portrait in the hero's third column */
+.hero-portrait { margin: 0; }
+.hero-portrait img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: 50% 16%;
+  border-radius: 2px;
+  filter: grayscale(1) contrast(1.03);
+  transition: filter var(--ease-l);
+}
+.hero-portrait:hover img { filter: grayscale(0) contrast(1); }
 .hero-sub { max-width: 56ch; font-size: 17px; line-height: 1.62; color: var(--muted); }
 .hero-sub strong { color: var(--ink); font-weight: 500; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
@@ -625,6 +653,15 @@ h1, h2, h3, h4 { font-weight: 400; line-height: 1.1; letter-spacing: -0.015em; }
   letter-spacing: -0.01em;
   margin-bottom: 8px;
 }
+.cred-link {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 6px;
+  border-bottom: 1px solid transparent;
+  transition: color var(--ease), border-color var(--ease);
+}
+.cred-link:hover { color: var(--accent); border-bottom-color: var(--accent); }
+
 .cred-meta {
   display: block;
   font: 400 11.5px/1.5 var(--mono);
@@ -847,7 +884,9 @@ a.contact-item:hover { background: rgba(251, 241, 236, 0.05); }
   .hero { padding: calc(var(--nav-h) + 56px) 0 0; }
   .hero-kicker { margin-bottom: 26px; }
   .hero-statement { margin-bottom: 30px; }
-  .hero-who { flex-direction: row; align-items: baseline; gap: 10px; }
+  .hero-who { flex-direction: row; flex-wrap: wrap; align-items: baseline; gap: 6px 10px; }
+  .hero-cert { margin-top: 0; }
+  .hero-portrait { display: none; }
 
   .proof { grid-template-columns: repeat(2, 1fr); margin-top: 56px; }
   .proof-item { padding: 20px 20px 20px 0; }
